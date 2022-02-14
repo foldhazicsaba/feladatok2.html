@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Köszöntés</button>
+
+        <p id="demo"></p>
+
+        <script type = "text/javascript">
+            var dDay = new Date()
+            var nHours = dDay.getHours()
+            if ((nHours <10 ) && (nHours >=5)) {document.write("jó reggelt!")}
+            if ((nHours >=10) && (nHours <19)) {document.write("jó napot!")}
+            if ((nHours >=19) && (nHours <24)) {document.write("jó estét!")}
+            if ((nHours >=0) && (nHours <5)) {document.write("jó éjszakát!")}
+         </script>     
+</body>
+</html>

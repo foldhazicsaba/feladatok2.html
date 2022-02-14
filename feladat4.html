@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Add meg, hogy a hét hányadik napja van!</p>
+
+    <button onclick="myFunction()">Kattints!</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      let text;
+      let szam = prompt("Adj meg egy számot!");
+      switch(szam) {
+        case "1":
+          text = "hétfő";
+          break;
+        case "2":
+          text = "kedd";
+          break;
+        case "3":
+          text = "szerda";
+          break;
+        case "4":
+          text = "csütörtök";
+          break;
+        case "5":
+          text = "péntek";
+          break;
+        case "6":
+          text = "szombat";
+          break;
+        case "7":
+          text = "vasárnap";
+          break;
+        default:
+          text = "Nem megfelelő számot adtál meg!";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+    
+</body>
+</html>

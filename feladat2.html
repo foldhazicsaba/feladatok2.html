@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <form class='sikidom' name='teglalap'>
+
+
+        <h4> A téglalap </h4>
+        <b>Adja meg a téglalap oldalait:</b><br>
+        <span><i><b>'a'</b></i> oldal hossza: </span> <input name='a' size=5> cm <br>
+        <span><i><b>'b'</b></i> oldal hossza: </span> <input name='b' size=5> cm <br>
+    
+        <span> </span>                                <input type=button value='Számol' onclick=' szamol(); '>
+        <hr>
+        <b>Eredmények:</b><br>
+        <span>Kerület: </span>                        <input name='K' size=10 readonly> cm <br>
+        <span>Terület: </span>                        <input name='T' size=10 readonly> cm<sup>2</sup>
+    </form>
+    <script>
+    
+        function szamol()
+        {
+        a = parseFloat(document.teglalap.a.value)
+        b = parseFloat(document.teglalap.b.value)
+        K = 2*(a+b)
+        T = a*b
+        document.teglalap.K.value = K
+        document.teglalap.T.value = T
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

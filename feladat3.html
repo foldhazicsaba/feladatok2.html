@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class='sikidom' name='haromszog'>
+
+
+        <h4> A háromszög </h4>
+        <b>Adja meg a háromszög oldalait:</b><br>
+        <span><i><b>'a'</b></i> oldal hossza: </span> <input name='a' size=5> cm <br>
+        <span><i><b>'b'</b></i> oldal hossza: </span> <input name='b' size=5> cm <br>
+        <span><i><b>'c'</b></i> oldal hossza: </span> <input name='c' size=5> cm <br>
+    
+        <span> </span>                                <input type=button value='Számol' onclick=' szamol(); '>
+        <hr>
+        <b>Eredmények:</b><br>
+        <span>Kerület: </span>                        <input name='K' size=10 readonly> cm <br>
+        <span>Terület: </span>                        <input name='T' size=10 readonly> cm<sup>2</sup>
+    </form>
+    <script>
+    
+        function szamol()
+        {
+        a = parseFloat(document.haromszog.a.value)
+        b = parseFloat(document.haromszog.b.value)
+        c = parseFloat(document.haromszog.c.value)
+        K = (a+b+c)
+        S = (a+b+c)/2
+        let T = Math.sqrt(S*(S-a)(S-b)(S-c))
+        document.haromszog.K.value = K
+        document.haromszog.T.value = T
+        }
+    </script>
+</body>
+</html>
